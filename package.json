@@ -2,6 +2,49 @@
   "name": "react-starter-kit",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --cache",
+    "lint:errors": "yarn lint -- --quiet",
+    "lint:fix": "yarn lint -- --fix",
+    "npx:sort-package-json": "npx --yes sort-package-json",
+    "prettier": "yarn prettier:javascript && yarn prettier:typescript && yarn prettier:css && yarn prettier:scss && yarn prettier:json && yarn prettier:markdown && yarn prettier:html && yarn prettier:yaml",
+    "prettier:css": "prettier --no-error-on-unmatched-pattern --parser css --write \"**/*.css\"",
+    "prettier:html": "prettier --no-error-on-unmatched-pattern --parser html --write \"**/*.html\"",
+    "prettier:javascript": "prettier --no-error-on-unmatched-pattern --parser --write \"**/*.{js,jsx}\"",
+    "prettier:json": "prettier --no-error-on-unmatched-pattern --parser json --write \"**/*.json\"",
+    "prettier:markdown": "prettier --no-error-on-unmatched-pattern --parser markdown --write \"**/*.md\"",
+    "prettier:scss": "prettier --no-error-on-unmatched-pattern --parser scss --write \"**/*.scss\"",
+    "prettier:typescript": "prettier --no-error-on-unmatched-pattern --parser typescript --write \"**/*.{ts,tsx}\"",
+    "prettier:yaml": "prettier --no-error-on-unmatched-pattern --parser yaml --write \"**/*.{yml,yaml}\"",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "html",
+      "text",
+      "text-summary"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -16,28 +59,8 @@
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-kit": "^6.9.0"
   }
 }
