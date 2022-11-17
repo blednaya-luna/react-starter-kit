@@ -8,9 +8,7 @@ module.exports = configure({
         groups: [
           ['^\\u0000'],
           ['^react', '^@?\\w'],
-          [
-            '^(components|constants|features|hooks|images|pages|services|setup|utils|widgets)(/.*|$)',
-          ],
+          ['^(app|entities|features|pages|processes|shared|widgets)(/.*|$)'],
           ['^\\.'],
         ],
       },
@@ -23,6 +21,9 @@ module.exports = configure({
     presets.node(),
     presets.react({
       newJSXTransform: true,
+    }),
+    presets.effector({
+      future: true,
     }),
   ],
 });
