@@ -46,13 +46,6 @@
     ]
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
     "effector": "^22.4.0",
     "effector-react": "^22.3.4",
     "patronum": "^1.12.3",
@@ -63,6 +56,13 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "eslint": "^8.27.0",
     "eslint-kit": "^6.9.0"
   }
